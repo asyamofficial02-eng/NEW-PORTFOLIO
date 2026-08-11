@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Personal Portfolio — IT Programmer, Meta Advertiser, Photographer & Videographer."
+    >
+
+    <title>Personal Portfolio</title>
+
+    <!-- Favicon -->
+<link
+    rel="icon"
+    type="image/png"
+    href="assets/profile/boy-dymasyogaf.webp"
+>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#08090d] text-white font-sans">
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header
+        id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-[#08090d]/80 backdrop-blur-xl"
+    >
+        <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+            <div class="h-20 flex items-center justify-between">
+
+                <!-- LOGO -->
+                <a
+    href="#home"
+    class="inline-flex items-center group"
+    aria-label="Raden - Home"
+>
+
+    <img
+        src="assets/profile/boy-dymasyogaf.webp"
+        alt="Raden Logo"
+        class="w-11 h-11 object-contain transition-all duration-300 group-hover:scale-110"
+    >
+
+</a>
+
+                <!-- DESKTOP NAV -->
+                <nav class="hidden md:flex items-center gap-8">
+
+                    <a
+                        href="#about"
+                        class="nav-link text-sm text-gray-400"
+                    >
+                        Tentang
+                    </a>
+
+                    <a
+                        href="#skills"
+                        class="nav-link text-sm text-gray-400"
+                    >
+                        Skill
+                    </a>
+
+                    <a
+                        href="#experience"
+                        class="nav-link text-sm text-gray-400"
+                    >
+                        Pengalaman
+                    </a>
+
+                    <a
+                        href="#services"
+                        class="nav-link text-sm text-gray-400"
+                    >
+                        Layanan
+                    </a>
+
+                    <a
+                        href="#portfolio"
+                        class="nav-link text-sm text-gray-400"
+                    >
+                        Portofolio
+                    </a>
+
+                </nav>
+
+                <!-- CTA -->
+                <a
+                    href="#contact"
+                    class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-sm font-semibold hover:bg-[#00f5a0] transition"
+                >
+                    Hubungi Saya
+                    <span>📞</span>
+                </a>
+
+                <!-- MOBILE BUTTON -->
+                <button
+                    id="menuButton"
+                    class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-white/10"
+                    aria-label="Buka menu"
+                >
+                    <span class="text-xl">☰</span>
+                </button>
+
+            </div>
+
+            <!-- MOBILE MENU -->
+            <div
+                id="mobileMenu"
+                class="mobile-menu md:hidden"
+            >
+                <nav class="flex flex-col gap-4">
+
+                    <a href="#about" class="mobile-link">
+                        Tentang
+                    </a>
+
+                    <a href="#skills" class="mobile-link">
+                        Skill
+                    </a>
+
+                    <a href="#experience" class="mobile-link">
+                        Pengalaman                    </a>
+
+                    <a href="#services" class="mobile-link">
+                        Layanan
+                    </a>
+
+                    <a href="#portfolio" class="mobile-link">
+                        Portofolio
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="mobile-link mobile-cta"
+                    >
+                        Hubungi Saya
+                    </a>
+
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section
+            id="home"
+            class="relative min-h-screen flex items-center pt-28 overflow-hidden grid-background"
+        >
+
+            <div class="orb orb-green"></div>
+            <div class="orb orb-purple"></div>
+
+            <div class="max-w-7xl mx-auto px-5 lg:px-8 w-full">
+
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- HERO TEXT -->
+                    <div class="reveal">
+
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1.5 mb-7 rounded-full border border-[#00f5a0]/20 bg-[#00f5a0]/5 text-[#00f5a0] text-xs font-mono"
+                        >
+                            <span class="w-2 h-2 rounded-full bg-[#00f5a0] animate-pulse"></span>
+
+                            Available for Projects
+                        </div>
+
+                        <p class="font-mono text-sm text-gray-500 mb-4">
+                            &lt;creative_tech /&gt;
+                        </p>
+
+                        <h1
+                            class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight"
+                        >
+                            I Build.<br>
+                            I Advertise.<br>
+                            I
+                            <span class="gradient-text">
+                                Capture.
+                            </span>
+                        </h1>
+
+                        <p
+                            class="mt-7 text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl"
+                        >
+                            Saya suka menggabungkan
+                            <span class="text-white font-medium">
+                                programming
+                            </span>,
+                            <span class="text-white font-medium">
+                                digital advertising
+                            </span>,
+                            dan
+                            <span class="text-white font-medium">
+                                desain visual
+                            </span>
+                            untuk bikin karya digital yang nggak cuma enak dilihat,
+                            tapi juga punya tujuan dan benar-benar ngasih impact.
+                        </p>
+
+                        <div class="flex flex-wrap gap-4 mt-9">
+
+                            <a
+                                href="#portfolio"
+                                class="px-6 py-3.5 rounded-xl bg-[#00f5a0] text-black font-semibold hover:shadow-neon transition"
+                            >
+                                Lihat Portofolio
+                            </a>
+
+                            <a
+                                href="#contact"
+                                class="px-6 py-3.5 rounded-xl border border-white/10 text-white hover:bg-white/5 transition"
+                            >
+                                Ayo Belajar Bareng!
+                            </a>
+
+                        </div>
+
+                        <div class="flex flex-wrap gap-8 mt-12">
+
+                            <div>
+                                <p class="text-2xl font-bold">
+                                    03
+                                </p>
+
+                                <p class="text-xs text-gray-500 mt-1">
+                                    Skill Dasar
+                                </p>
+                            </div>
+
+                            <div>
+                                <p class="text-2xl font-bold">
+                                    ∞
+                                </p>
+
+                                <p class="text-xs text-gray-500 mt-1">
+                                    Ide
+                                </p>
+                            </div>
+
+                            <div>
+                                <p class="text-2xl font-bold">
+                                    100%
+                                </p>
+
+                                <p class="text-xs text-gray-500 mt-1">
+                                    Kreatifitas
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROFILE -->
+                    <div class="reveal lg:justify-self-end">
+
+                        <div class="profile-wrapper">
+
+                            <div
+                                class="relative w-full max-w-md aspect-[4/5] rounded-[30px] overflow-hidden border border-white/10 bg-[#101218]"
+                            >
+
+                                <!--
+                                    FOTO PROFILE
+                                    Ganti dengan foto lo:
+                                    assets/profile.jpg
+                                -->
+
+                                <img
+                                    src="assets/profile/aestetod-dymasyogaf-dymasyogaf.webp"
+                                    alt="Profile"
+                                    class="w-full h-full object-cover transition duration-700"
+                                >
+
+                                <!-- Dark overlay -->
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-[#08090d]/30 via-transparent to-transparent"
+                                ></div>
+
+
+                                <!-- CODE CARD -->
+                                <div
+                                    class="absolute top-5 left-5 px-4 py-3 rounded-xl bg-black/60 backdrop-blur-xl border border-white/10 font-mono text-xs"
+                                >
+
+                                    <p class="text-gray-500">
+                                        developer.js
+                                    </p>
+
+                                    <p class="mt-1">
+
+                                        <span class="text-purple-400">
+                                            const
+                                        </span>
+
+                                        <span class="text-blue-400">
+                                            passion
+                                        </span>
+
+                                        =
+
+                                        <span class="text-[#00f5a0]">
+                                            "create"
+                                        </span>;
+
+                                    </p>
+
+                                </div>
+
+
+                                <!-- ADS CARD -->
+                                <div
+                                    class="absolute bottom-5 right-5 p-4 rounded-xl bg-black/65 backdrop-blur-xl border border-white/10"
+                                >
+
+                                    <div class="flex items-center gap-3">
+
+                                        <div
+                                            class="w-9 h-9 rounded-lg bg-[#00f5a0]/10 flex items-center justify-center text-[#00f5a0]"
+                                        >
+                                            ↗
+                                        </div>
+
+                                        <div>
+
+                                            <p class="text-xs text-gray-500">
+                                                Campaign
+                                            </p>
+
+                                            <p class="font-semibold text-sm">
+                                                ROAS +100%
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section
+            id="about"
+            class="py-28 relative"
+        >
+
+            <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                    <div class="reveal">
+
+                        <p class="section-label">
+                            01 / TENTANG SAYA
+                        </p>
+
+                        <h2 class="text-4xl sm:text-5xl font-bold">
+
+                            One person.
+                            <span class="gradient-text">
+                                Three perspectives.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+                    <div class="reveal">
+
+                        <p class="text-gray-400 leading-relaxed">
+                            Aku suka main di tiga dunia: teknologi, marketing, dan desain grafis.
+                            Kadang aku ngulik code buat bikin sesuatu dari nol, kadang aku utak-atik campaign dan data,
+                            dan kadang aku pegang hp "Android" aku buat nangkep sebuah cerita. 
+                            
+                        </p>
+
+                        <p class="text-gray-400 leading-relaxed mt-5">
+                            Buat aku, ngoding bukan cuma bikin website, advertising bukan cuma jalanin iklan,
+                            dan fotografi bukan cuma ambil gambar. Ketiganya punya cara masing-masing buat bikin sesuatu jadi lebih berarti
+                            dari sekadar kepikiran sampai akhirnya punya impact yang nyata.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+
+        <section
+            id="skills"
+            class="py-28 bg-[#0b0c11] grid-background"
+        >
+
+            <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+                <div class="reveal mb-14">
+
+                    <p class="section-label">
+                        02 / KEAHLIAN
+                    </p>
+
+                    <h2 class="text-4xl sm:text-5xl font-bold">
+                        What I
+                        <span class="gradient-text">
+                            Do.
+                        </span>
+                    </h2>
+
+                </div>
+
+
+                <div class="grid lg:grid-cols-3 gap-6">
+
+
+                    <!-- PROGRAMMER -->
+
+                    <div class="glass-card glow-green rounded-3xl p-6 reveal">
+
+                        <div class="flex items-center justify-between mb-7">
+
+                            <div
+                                class="w-12 h-12 rounded-xl bg-[#00f5a0]/10 flex items-center justify-center text-[#00f5a0] text-xl"
+                            >
+                                &lt;/&gt;
+                            </div>
+
+                            <span class="text-xs font-mono text-gray-600">
+                                01
+                            </span>
+
+                        </div>
+
+                        <h3 class="text-xl font-bold">
+                            IT Programmer
+                        </h3>
+
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed">
+                            Membuat website modern, responsive,
+                            dan interactive menggunakan teknologi web modern.
+                        </p>
+
+
+                        <div
+                            class="mt-6 rounded-xl bg-[#08090d] border border-white/5 p-4 font-mono text-xs"
+                        >
+
+                            <div class="flex gap-1.5 mb-4">
+
+                                <span class="w-2.5 h-2.5 bg-red-400 rounded-full"></span>
+                                <span class="w-2.5 h-2.5 bg-yellow-400 rounded-full"></span>
+                                <span class="w-2.5 h-2.5 bg-green-400 rounded-full"></span>
+
+                            </div>
+
+                            <p class="text-gray-500">
+                                // current_stack
+                            </p>
+
+                            <p class="mt-2 text-purple-400">
+                                HTML5
+                            </p>
+
+                            <p class="text-blue-400">
+                                CSS3
+                            </p>
+
+                            <p class="text-yellow-400">
+                                JavaScript
+                            </p>
+
+                            <p class="text-cyan-400">
+                                Tailwind
+                            </p>
+
+                            <p class="mt-3 text-[#00f5a0] terminal-line">
+                                npm run create
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ADVERTISER -->
+
+                    <div class="glass-card glow-purple rounded-3xl p-6 reveal">
+
+                        <div class="flex items-center justify-between mb-7">
+
+                            <div
+                                class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-xl"
+                            >
+                                ↗
+                            </div>
+
+                            <span class="text-xs font-mono text-gray-600">
+                                02
+                            </span>
+
+                        </div>
+
+                        <h3 class="text-xl font-bold">
+                            Meta Advertiser
+                        </h3>
+
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed">
+                            Mengelola campaign Meta Ads dengan pendekatan
+                            audiens untuk meningkatkan reach,
+                            leads, dan konversi.
+                        </p>
+
+
+                        <div
+                            class="mt-6 rounded-xl bg-[#08090d] border border-white/5 p-4"
+                        >
+
+                            <div class="flex justify-between">
+
+                                <span class="text-xs text-gray-500">
+                                    Campaign Performance
+                                </span>
+
+                                <span class="text-xs text-[#00f5a0]">
+                                    +24.8%
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex items-end gap-1 h-20 mt-5">
+
+                                <span class="chart-bar h-[30%] bg-purple-500/30"></span>
+                                <span class="chart-bar h-[45%] bg-purple-500/40"></span>
+                                <span class="chart-bar h-[35%] bg-purple-500/30"></span>
+                                <span class="chart-bar h-[60%] bg-purple-500/50"></span>
+                                <span class="chart-bar h-[70%] bg-purple-500/60"></span>
+                                <span class="chart-bar h-[85%] bg-purple-500/70"></span>
+                                <span class="chart-bar h-[100%] bg-[#00f5a0]/70"></span>
+
+                            </div>
+
+
+                            <div class="grid grid-cols-3 gap-3 mt-5">
+
+                                <div>
+                                    <p class="text-[10px] text-gray-600">
+                                        ROAS
+                                    </p>
+
+                                    <p class="text-sm font-bold">
+                                        3.0x
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p class="text-[10px] text-gray-600">
+                                        CTR
+                                    </p>
+
+                                    <p class="text-sm font-bold">
+                                        3.42%
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p class="text-[10px] text-gray-600">
+                                        Leads
+                                    </p>
+
+                                    <p class="text-sm font-bold">
+                                        +40
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PHOTOGRAPHY -->
+
+                    <div class="glass-card rounded-3xl p-6 reveal">
+
+                        <div class="flex items-center justify-between mb-7">
+
+                            <div
+                                class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl"
+                            >
+                                ◉
+                            </div>
+
+                            <span class="text-xs font-mono text-gray-600">
+                                03
+                            </span>
+
+                        </div>
+
+                        <h3 class="text-xl font-bold">
+                            Photo & Videographer
+                        </h3>
+
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed">
+                            Mengubah momen menjadi visual yang memiliki karakter
+                            melalui fotografi, videografi, dan post-production.
+                        </p>
+
+
+                        <div class="mt-6 space-y-3">
+
+                            <div
+                                class="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] border border-white/5"
+                            >
+                                <span class="text-sm">
+                                    Photography
+                                </span>
+
+                                <span class="text-xs text-gray-600">
+                                    Capture
+                                </span>
+                            </div>
+
+                            <div
+                                class="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] border border-white/5"
+                            >
+                                <span class="text-sm">
+                                    Videography
+                                </span>
+
+                                <span class="text-xs text-gray-600">
+                                    Storytelling & Cinematic
+                                </span>
+                            </div>
+
+                            <div
+                                class="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] border border-white/5"
+                            >
+                                <span class="text-sm">
+                                    Editing
+                                </span>
+
+                                <span class="text-xs text-gray-600">
+                                    Canva / Gemini AI
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EXPERIENCE
+        ========================== -->
+
+        <section
+            id="experience"
+            class="py-28"
+        >
+
+            <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+                <div class="grid lg:grid-cols-2 gap-20">
+
+
+                    <!-- EXPERIENCE -->
+
+                    <div class="reveal">
+
+                        <p class="section-label">
+                            03 / PENGALAMAN
+                        </p>
+
+                        <h2 class="text-4xl font-bold mb-10">
+                            Pengalaman
+                        </h2>
+
+
+                        <div class="relative pl-8 space-y-10">
+
+                            <div class="timeline-line"></div>
+
+
+                            <div class="relative">
+
+                                <span class="timeline-dot active-dot"></span>
+
+                                <p class="text-xs font-mono text-[#00f5a0]">
+                                    2026 — Sekarang
+                                </p>
+
+                                <h3 class="font-bold text-lg mt-2">
+                                    Magang di Yayasan Alfatihah / Personal Projects
+                                </h3>
+
+                                <p class="text-gray-500 text-sm mt-2 leading-relaxed">
+                                    Ngerjain berbagai project website,
+                                    advertising, dan konten visual.
+                                </p>
+
+                            </div>
+
+
+                            <div class="relative">
+
+                                <span class="timeline-dot"></span>
+
+                                <p class="text-xs font-mono text-gray-500">
+                                    2025 — 2026
+                                </p>
+
+                                <h3 class="font-bold text-lg mt-2">
+                                    PIC Proyek Divisi
+                                </h3>
+
+                                <p class="text-gray-500 text-sm mt-2 leading-relaxed">
+                                    Pengalaman kerja dan pengembangan skill
+                                    dalam lingkungan profesional.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EDUCATION -->
+
+                    <div class="reveal">
+
+                        <p class="section-label purple-label">
+                            04 / EDUKASI
+                        </p>
+
+                        <h2 class="text-4xl font-bold mb-10">
+                            Pendidikan
+                        </h2>
+
+
+                        <div class="relative pl-8 space-y-10">
+
+                            <div class="education-line"></div>
+
+
+                            <div class="relative">
+
+                                <span class="timeline-dot purple-dot"></span>
+
+                                <p class="text-xs font-mono text-purple-400">
+                                    2025 — Sekarang
+                                </p>
+
+                                <h3 class="font-bold text-lg mt-2">
+                                    SMK IT AlHidayah
+                                </h3>
+
+                                <p class="text-gray-500 text-sm mt-2 leading-relaxed">
+                                    Fokus pada software development, digital marketing,
+                                    web development, dan desain grafis.
+                                </p>
+
+                            </div>
+
+
+                            <div class="relative">
+
+                                <span class="timeline-dot"></span>
+
+                                <p class="text-xs font-mono text-gray-500">
+                                    Continuous Learning
+                                </p>
+
+                                <h3 class="font-bold text-lg mt-2">
+                                    Self Learning
+                                </h3>
+
+                                <p class="text-gray-500 text-sm mt-2 leading-relaxed">
+                                    Belajar programming, advertising, fotografi,
+                                    videografi, dan design secara mandiri.
+                                </p>
+
+                            </div>
+
+                            <div class="relative">
+
+                                <span class="timeline-dot"></span>
+
+                                <p class="text-xs font-mono text-gray-500">
+                                    2022 — 2025
+                                </p>
+
+                                <h3 class="font-bold text-lg mt-2">
+                                    Pondok Pesantren Daarut Tauhiid
+                                </h3>
+
+                                <p class="text-gray-500 text-sm mt-2 leading-relaxed">
+                                    Belajar ilmu-ilmu kepesantrenan, menguatkan akhlaq dan mental
+                                    serta mempelajari ilmu pengetahuan umum.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SERVICES
+        ========================== -->
+
+        <section
+            id="services"
+            class="py-28 bg-[#0b0c11]"
+        >
+
+            <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+                <div class="reveal text-center max-w-2xl mx-auto mb-14">
+
+                    <p class="section-label">
+                        05 / LAYANAN
+                    </p>
+
+                    <h2 class="text-4xl sm:text-5xl font-bold">
+
+                        Things I Can
+                        <span class="gradient-text">
+                            Create.
+                        </span>
+
+                    </h2>
+
+                    <p class="text-gray-500 mt-5">
+                        Dari yang cuma kepikiran sampai jadi sebuah produk digital
+                        atau konten visual yang siap digunakan.
+                    </p>
+
+                </div>
+
+
+                <div class="grid md:grid-cols-3 gap-6">
+
+
+                    <!-- DESIGN -->
+
+                    <div class="service-card glass-card rounded-3xl p-7 reveal">
+
+                        <div class="service-icon pink">
+                            ✦
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-7">
+                            Advertising
+                        </h3>
+
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed">
+                            Desain visual untuk kebutuhan social media,
+                            campaign, branding, dan digital content.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mt-6">
+
+                            <span class="tag">
+                                Social Media
+                            </span>
+
+                            <span class="tag">
+                                Branding
+                            </span>
+
+                            <span class="tag">
+                                Content
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- WEBSITE -->
+
+                    <div class="service-card glass-card rounded-3xl p-7 reveal">
+
+                        <div class="service-icon green">
+                            &lt;/&gt;
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-7">
+                            Landing Page / Website
+                        </h3>
+
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed">
+                            Website modern, responsive, cepat,
+                            dan dirancang dengan fokus pada user experience.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mt-6">
+
+                            <span class="tag">
+                                HTML
+                            </span>
+
+                            <span class="tag">
+                                CSS
+                            </span>
+
+                            <span class="tag">
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PHOTO VIDEO -->
+
+                    <div class="service-card glass-card rounded-3xl p-7 reveal">
+
+                        <div class="service-icon blue">
+                            ◉
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-7">
+                            Foto & Video
+                        </h3>
+
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed">
+                            Produksi foto dan video buat dokumentasi,
+                            campaign, social media, dan storytelling.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mt-6">
+
+                            <span class="tag">
+                                Photo
+                            </span>
+
+                            <span class="tag">
+                                Video
+                            </span>
+
+                            <span class="tag">
+                                Editing
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PORTFOLIO / FLEX
+        ========================== -->
+
+        <section
+            id="portfolio"
+            class="py-28"
+        >
+
+            <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+                <div
+                    class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 reveal"
+                >
+
+                    <div>
+
+                        <p class="section-label">
+                            06 / PORTOFOLIO
+                        </p>
+
+                        <h2 class="text-4xl sm:text-5xl font-bold">
+
+                            My
+                            <span class="gradient-text">
+                                Showcase.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+                    <p class="text-gray-500 max-w-md text-sm leading-relaxed">
+                        Koleksi pencapaian, project, dokumentasi,
+                        dan desain yang pernah aku kerjain.
+                    </p>
+
+                </div>
+
+
+                <!-- FILTER -->
+
+                <div
+                    id="portfolioFilters"
+                    class="flex flex-wrap gap-2 mb-8 reveal"
+                >
+
+                    <button
+                        data-filter="all"
+                        class="filter-btn active"
+                    >
+                        Semua
+                    </button>
+
+                    <button
+                        data-filter="programming"
+                        class="filter-btn"
+                    >
+                        Programming
+                    </button>
+
+                    <button
+                        data-filter="advertising"
+                        class="filter-btn"
+                    >
+                        Advertising
+                    </button>
+
+                    <button
+                        data-filter="photography"
+                        class="filter-btn"
+                    >
+                        Fotografi
+                    </button>
+
+                    <button
+                        data-filter="achievement"
+                        class="filter-btn"
+                    >
+                        Penghargaan
+                    </button>
+
+                </div>
+
+
+                <!--
+                    GRID INI AKAN DIISI OTOMATIS
+                    OLEH JavaScript
+                -->
+
+                <div
+                    id="portfolioGrid"
+                    class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section
+            id="contact"
+            class="py-28 bg-[#0b0c11] grid-background"
+        >
+
+            <div class="max-w-5xl mx-auto px-5 lg:px-8">
+
+                <div class="grid lg:grid-cols-2 gap-14">
+
+
+                    <!-- CONTACT INFO -->
+
+                    <div class="reveal">
+
+                        <p class="section-label">
+                            07 / KONTAK
+                        </p>
+
+                        <h2 class="text-4xl sm:text-5xl font-bold">
+
+                            Let's create
+                            <span class="gradient-text">
+                                something.
+                            </span>
+
+                        </h2>
+
+                        <p class="text-gray-500 mt-6 leading-relaxed">
+                            Punya project, campaign, website,
+                            atau sekadar ingin ngobrol tentang creative tech?
+                            Kirim pesan dan kita selesaiin bareng.
+                        </p>
+
+
+                        <div class="mt-10 space-y-4">
+
+                            <a
+                                href="mailto:hello@example.com"
+                                class="contact-card"
+                            >
+
+                                <div class="contact-icon">
+                                    📩
+                                </div>
+
+                                <div>
+
+                                    <p class="text-xs text-gray-600">
+                                        Email
+                                    </p>
+
+                                    <p class="text-sm">
+                                        asyamofficial@gmail.com
+                                    </p>
+
+                                </div>
+
+                            </a>
+
+
+                            <!--
+                                GANTI NOMOR WHATSAPP
+                                Format:
+                                628xxxxxxxxxx
+                            -->
+
+                            <a
+                                href="https://wa.me/6282318399930"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-card"
+                            >
+
+                                <div class="contact-icon whatsapp">
+                                    ☎
+                                </div>
+
+                                <div>
+
+                                    <p class="text-xs text-gray-600">
+                                        WhatsApp
+                                    </p>
+
+                                    <p class="text-sm">
+                                        082318399930
+                                    </p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FORM -->
+
+                    <form
+                        id="contactForm"
+                        class="glass-card rounded-3xl p-6 sm:p-8 reveal"
+                    >
+
+                        <div class="space-y-5">
+
+
+                            <div>
+
+                                <label class="text-xs text-gray-500">
+                                    Nama
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    placeholder="Nama kamu"
+                                    class="input-field"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label class="text-xs text-gray-500">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    placeholder="email@example.com"
+                                    class="input-field"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label class="text-xs text-gray-500">
+                                    Pesan
+                                </label>
+
+                                <textarea
+                                    name="message"
+                                    rows="5"
+                                    required
+                                    placeholder="Ceritain keperluan kamu..."
+                                    class="input-field resize-none"
+                                ></textarea>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="w-full py-3.5 rounded-xl bg-[#00f5a0] text-black font-bold hover:shadow-neon transition"
+                            >
+                                Kirim Pesan ↗
+                            </button>
+
+
+                            <p
+                                id="formMessage"
+                                class="hidden text-center text-xs text-[#00f5a0]"
+                            >
+                                Membuka aplikasi email...
+                            </p>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="border-t border-white/5">
+
+        <div
+            class="max-w-7xl mx-auto px-5 lg:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-4"
+        >
+
+            <p class="text-xs text-gray-600">
+
+                ©
+                <span id="year">2026</span>
+                Raden.
+                All rights reserved.
+
+            </p>
+
+
+            <div class="flex items-center gap-5">
+
+                <a
+                    href="https://www.instagram.com/10ags18/"
+                    class="footer-link"
+                >
+                    Instagram
+                </a>
+
+                <a
+                    href="https://github.com/asyamofficial02-eng"
+                    class="footer-link"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/raden-muhammad-syaiful-asyam-ramadhan-788a503b0/"
+                    class="footer-link"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT EXTERNAL -->
+    <script src="script.js"></script>
+
+</body>
+</html>

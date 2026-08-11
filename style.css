@@ -1,0 +1,733 @@
+/* =========================================================
+   PERSONAL PORTFOLIO
+   CUSTOM CSS
+========================================================= */
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+::selection {
+    background: #00f5a0;
+    color: #08090d;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #08090d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #292d38;
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00f5a0;
+}
+
+
+/* =========================
+   GRID BACKGROUND
+========================= */
+
+.grid-background {
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+}
+
+
+/* =========================
+   GRADIENT TEXT
+========================= */
+
+.gradient-text {
+    background: linear-gradient(
+        90deg,
+        #00f5a0,
+        #3b82f6,
+        #8b5cf6
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+/* =========================
+   SECTION LABEL
+========================= */
+
+.section-label {
+    font-family: "JetBrains Mono", monospace;
+    color: #00f5a0;
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.purple-label {
+    color: #8b5cf6;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav-link {
+    transition:
+        color 0.25s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.glass-card {
+    background: rgba(16, 18, 24, 0.72);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    border-color: rgba(0, 245, 160, 0.25);
+}
+
+
+/* =========================
+   GLOW
+========================= */
+
+.glow-green {
+    box-shadow:
+        0 0 30px rgba(0, 245, 160, 0.08),
+        inset 0 0 30px rgba(0, 245, 160, 0.015);
+}
+
+.glow-purple {
+    box-shadow:
+        0 0 30px rgba(139, 92, 246, 0.08),
+        inset 0 0 30px rgba(139, 92, 246, 0.015);
+}
+
+
+/* =========================
+   NEON SHADOW
+========================= */
+
+.shadow-neon {
+    box-shadow:
+        0 0 25px rgba(0, 245, 160, 0.18);
+}
+
+
+/* =========================
+   FLOATING ORBS
+========================= */
+
+.orb {
+    position: absolute;
+
+    border-radius: 999px;
+
+    filter: blur(90px);
+
+    pointer-events: none;
+}
+
+.orb-green {
+    width: 250px;
+    height: 250px;
+
+    background: rgba(0, 245, 160, 0.06);
+
+    top: 80px;
+    left: -100px;
+}
+
+.orb-purple {
+    width: 300px;
+    height: 300px;
+
+    background: rgba(139, 92, 246, 0.06);
+
+    bottom: 0;
+    right: -100px;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-wrapper {
+    position: relative;
+}
+
+.profile-wrapper::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -15px;
+
+    border:
+        1px solid
+        rgba(0, 245, 160, 0.15);
+
+    border-radius: 30px;
+
+    transform: rotate(4deg);
+}
+
+.profile-wrapper::after {
+    content: "";
+
+    position: absolute;
+
+    inset: -30px;
+
+    border:
+        1px solid
+        rgba(139, 92, 246, 0.08);
+
+    border-radius: 40px;
+
+    transform: rotate(-5deg);
+}
+
+
+/* =========================
+   TERMINAL
+========================= */
+
+.terminal-line::before {
+    content: "$";
+
+    color: #00f5a0;
+
+    margin-right: 10px;
+}
+
+
+/* =========================
+   CHART
+========================= */
+
+.chart-bar {
+    width: 100%;
+
+    border-radius: 4px 4px 0 0;
+
+    transition:
+        height 0.5s ease,
+        opacity 0.3s ease;
+}
+
+.chart-bar:hover {
+    opacity: 1;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline-line {
+    position: absolute;
+
+    left: 7px;
+    top: 12px;
+    bottom: 0;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #00f5a0,
+            rgba(255, 255, 255, 0.05)
+        );
+}
+
+.education-line {
+    position: absolute;
+
+    left: 7px;
+    top: 12px;
+    bottom: 0;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #8b5cf6,
+            rgba(255, 255, 255, 0.05)
+        );
+}
+
+.timeline-dot {
+    position: absolute;
+
+    left: -29px;
+    top: 4px;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 999px;
+
+    background: #4b5563;
+}
+
+.active-dot {
+    background: #00f5a0;
+
+    box-shadow:
+        0 0 20px rgba(0, 245, 160, 0.5);
+}
+
+.purple-dot {
+    background: #8b5cf6;
+}
+
+
+/* =========================
+   SERVICE CARD
+========================= */
+
+.service-card {
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(0, 245, 160, 0.25);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   SERVICE ICON
+========================= */
+
+.service-icon {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    font-size: 1.4rem;
+}
+
+.service-icon.pink {
+    background: rgba(236, 72, 153, 0.1);
+    color: #f472b6;
+}
+
+.service-icon.green {
+    background: rgba(0, 245, 160, 0.1);
+    color: #00f5a0;
+}
+
+.service-icon.blue {
+    background: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+}
+
+
+/* =========================
+   TAG
+========================= */
+
+.tag {
+    padding: 0.35rem 0.75rem;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #9ca3af;
+
+    font-size: 0.7rem;
+}
+
+
+/* =========================
+   PORTFOLIO CARD
+========================= */
+
+.portfolio-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.05);
+
+    background: #101218;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(0, 245, 160, 0.2);
+}
+
+
+/* =========================
+   PORTFOLIO IMAGE
+========================= */
+
+.portfolio-image {
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+.portfolio-card:hover
+.portfolio-image {
+    transform: scale(1.07);
+
+    filter: brightness(0.75);
+}
+
+
+/* =========================
+   FILTER BUTTON
+========================= */
+
+.filter-btn {
+    padding: 0.55rem 1rem;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #9ca3af;
+
+    font-size: 0.75rem;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.filter-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+
+    color: white;
+}
+
+.filter-btn.active {
+    background: white;
+
+    color: black;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1rem;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.05);
+
+    border-radius: 16px;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.contact-card:hover {
+    border-color:
+        rgba(0, 245, 160, 0.2);
+
+    background:
+        rgba(255, 255, 255, 0.02);
+}
+
+
+/* =========================
+   CONTACT ICON
+========================= */
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.contact-icon.whatsapp {
+    background:
+        rgba(0, 245, 160, 0.1);
+
+    color: #00f5a0;
+}
+
+
+/* =========================
+   FORM INPUT
+========================= */
+
+.input-field {
+    width: 100%;
+
+    margin-top: 0.5rem;
+
+    padding: 0.875rem 1rem;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.03);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    outline: none;
+
+    color: white;
+
+    font-size: 0.875rem;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.input-field::placeholder {
+    color: #4b5563;
+}
+
+.input-field:focus {
+    border-color:
+        rgba(0, 245, 160, 0.4);
+
+    background:
+        rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-link {
+    color: #6b7280;
+
+    font-size: 0.75rem;
+
+    transition:
+        color 0.25s ease;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile-menu {
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+
+    top: 85px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(16, 18, 24, 0.95);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(20px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform:
+        translateY(-10px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.mobile-menu.open {
+    opacity: 1;
+
+    pointer-events: auto;
+
+    transform:
+        translateY(0);
+}
+
+.mobile-link {
+    display: block;
+
+    color: #9ca3af;
+
+    padding: 8px 0;
+
+    transition:
+        color 0.25s ease;
+}
+
+.mobile-link:hover {
+    color: white;
+}
+
+.mobile-cta {
+    text-align: center;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: #00f5a0;
+
+    color: #08090d;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 767px) {
+
+    .profile-wrapper::before {
+        inset: -8px;
+    }
+
+    .profile-wrapper::after {
+        inset: -16px;
+    }
+
+    .orb-green {
+        width: 180px;
+        height: 180px;
+    }
+
+    .orb-purple {
+        width: 200px;
+        height: 200px;
+    }
+
+}
