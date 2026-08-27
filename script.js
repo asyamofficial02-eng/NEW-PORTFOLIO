@@ -6,19 +6,6 @@
 
 /* =========================================================
    PORTFOLIO DATA
-
-   FOTO LO TARUH DI:
-
-   assets/
-   └── flex/
-       ├── project-website.jpg
-       ├── meta-ads.jpg
-       ├── foto-portrait.jpg
-       ├── achievement.jpg
-       ├── campaign-dashboard.jpg
-       └── event.jpg
-
-   Tinggal tambah object baru kalau mau tambah Flex.
 ========================================================= */
 
 const portfolioData = [
@@ -69,32 +56,48 @@ const portfolioData = [
         image: "assets/flex/DSC01807 (2)-dymasyogaf.webp",
         description:
             "Dokumentasi event organisasi dengan pendekatan storytelling."
+    },
+
+    {
+        title: "Creative Tech Project",
+        category: "achievement",
+        image: "assets/flex/SERTIFIKAT SOLOLEARN ASYAM (1).webp",
+        description:
+            "Sertifikat pelatihan online Web Development di SoloLearn."
+    },
+
+    {
+        title: "Creative Tech Project",
+        category: "achievement",
+        image: "assets/flex/piag_Informatika - OPSI 2026 (1).webp",
+        description:
+            "Piagam penghargaan olimpiade online informatika dalam event OPSI 2026 yang diselenggarakan oleh PUSKANAS."
+    },
+
+    {
+        title: "Typography Portrait",
+        category: "photography",
+        image: "assets/flex/TYPOGRAFI 6 (1)-dymasyogaf.webp",
+        description:
+            "Portrait typografi dengan cinematic playable visual treatment."
     }
 
 ];
 
 
 /* =========================================================
-   PORTFOLIO ELEMENT
+   PORTFOLIO
 ========================================================= */
 
 const portfolioGrid =
     document.getElementById("portfolioGrid");
 
 
-/* =========================================================
-   RENDER PORTFOLIO
-========================================================= */
-
 function renderPortfolio(filter = "all") {
 
-    if (!portfolioGrid) {
-        return;
-    }
-
+    if (!portfolioGrid) return;
 
     portfolioGrid.innerHTML = "";
-
 
     const filteredData =
         filter === "all"
@@ -104,107 +107,86 @@ function renderPortfolio(filter = "all") {
             );
 
 
-    filteredData.forEach(
-        (item, index) => {
+    filteredData.forEach((item, index) => {
 
-            const card =
-                document.createElement("article");
-
-
-            card.className =
-                "portfolio-card group rounded-3xl";
+        const card =
+            document.createElement("article");
 
 
-            card.innerHTML = `
+        card.className =
+            "portfolio-card group rounded-3xl reveal";
 
-                <!-- IMAGE -->
 
-                <div
-                    class="relative aspect-[4/3] overflow-hidden rounded-3xl"
+        card.innerHTML = `
+
+            <div class="relative aspect-[4/3] overflow-hidden rounded-3xl">
+
+                <img
+                    src="${item.image}"
+                    alt="${item.title}"
+                    loading="lazy"
+                    class="portfolio-image w-full h-full object-cover"
                 >
 
-                    <img
-                        src="${item.image}"
-                        alt="${item.title}"
-                        loading="lazy"
-                        class="portfolio-image w-full h-full object-cover"
-                    >
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90"
+                ></div>
 
-
-                    <!-- OVERLAY -->
+                <div
+                    class="absolute inset-x-0 bottom-0 p-5"
+                >
 
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90"
-                    ></div>
-
-
-                    <!-- CONTENT -->
-
-                    <div
-                        class="absolute inset-x-0 bottom-0 p-5"
+                        class="flex items-center justify-between gap-3"
                     >
 
-                        <div
-                            class="flex items-center justify-between gap-3"
-                        >
-
-                            <div>
-
-                                <span
-                                    class="text-[10px] uppercase tracking-widest text-[#00f5a0]"
-                                >
-                                    ${item.category}
-                                </span>
-
-                                <h3
-                                    class="font-bold mt-1"
-                                >
-                                    ${item.title}
-                                </h3>
-
-                            </div>
-
+                        <div>
 
                             <span
-                                class="w-9 h-9 shrink-0 rounded-full bg-white/10 backdrop-blur flex items-center justify-center group-hover:bg-[#00f5a0] group-hover:text-black transition"
+                                class="text-[10px] uppercase tracking-widest text-[#00f5a0]"
                             >
-                                ↗
+                                ${item.category}
                             </span>
+
+                            <h3 class="font-bold mt-1">
+                                ${item.title}
+                            </h3>
 
                         </div>
 
-
-                        <p
-                            class="text-xs text-gray-400 mt-3 line-clamp-2"
+                        <span
+                            class="w-9 h-9 shrink-0 rounded-full bg-white/10 backdrop-blur flex items-center justify-center group-hover:bg-[#00f5a0] group-hover:text-black transition"
                         >
-                            ${item.description}
-                        </p>
+                            ↗
+                        </span>
 
                     </div>
 
+                    <p
+                        class="text-xs text-gray-400 mt-3 line-clamp-2"
+                    >
+                        ${item.description}
+                    </p>
+
                 </div>
-            `;
+
+            </div>
+        `;
 
 
-            portfolioGrid.appendChild(card);
+        portfolioGrid.appendChild(card);
 
 
-            /* Reveal card */
+        setTimeout(() => {
+            card.classList.add("active");
+        }, index * 80);
 
-            setTimeout(
-                () => {
-                    card.classList.add("active");
-                },
-                index * 80
-            );
-
-        }
-    );
+    });
 
 }
 
 
-/* Jalankan pertama kali */
+/* Jalankan portfolio */
 
 renderPortfolio();
 
@@ -217,46 +199,27 @@ const filterButtons =
     document.querySelectorAll(".filter-btn");
 
 
-filterButtons.forEach(
-    button => {
+filterButtons.forEach(button => {
 
-        button.addEventListener(
-            "click",
-            () => {
+    button.addEventListener("click", () => {
 
-                const filter =
-                    button.dataset.filter;
+        const filter =
+            button.dataset.filter;
 
 
-                /* Reset semua button */
-
-                filterButtons.forEach(
-                    btn => {
-
-                        btn.classList.remove(
-                            "active"
-                        );
-
-                    }
-                );
+        filterButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
 
 
-                /* Aktifkan button */
-
-                button.classList.add(
-                    "active"
-                );
+        button.classList.add("active");
 
 
-                /* Render */
+        renderPortfolio(filter);
 
-                renderPortfolio(filter);
+    });
 
-            }
-        );
-
-    }
-);
+});
 
 
 /* =========================================================
@@ -270,49 +233,34 @@ const mobileMenu =
     document.getElementById("mobileMenu");
 
 
-if (
-    menuButton &&
-    mobileMenu
-) {
+if (menuButton && mobileMenu) {
 
-    menuButton.addEventListener(
-        "click",
-        () => {
+    menuButton.addEventListener("click", () => {
 
-            mobileMenu.classList.toggle(
-                "open"
-            );
+        mobileMenu.classList.toggle("open");
 
-        }
-    );
+    });
 
 }
 
 
-/* Tutup menu setelah klik link */
+/* Tutup mobile menu */
 
 const mobileLinks =
-    document.querySelectorAll(
-        ".mobile-link"
-    );
+    document.querySelectorAll(".mobile-link");
 
 
-mobileLinks.forEach(
-    link => {
+mobileLinks.forEach(link => {
 
-        link.addEventListener(
-            "click",
-            () => {
+    link.addEventListener("click", () => {
 
-                mobileMenu.classList.remove(
-                    "open"
-                );
+        if (mobileMenu) {
+            mobileMenu.classList.remove("open");
+        }
 
-            }
-        );
+    });
 
-    }
-);
+});
 
 
 /* =========================================================
@@ -325,44 +273,31 @@ let revealObserver;
 function observeRevealElements() {
 
     if (revealObserver) {
-
         revealObserver.disconnect();
-
     }
 
 
     const revealElements =
-        document.querySelectorAll(
-            ".reveal"
-        );
+        document.querySelectorAll(".reveal");
 
 
     revealObserver =
         new IntersectionObserver(
-            (
-                entries
-            ) => {
+            entries => {
 
-                entries.forEach(
-                    entry => {
+                entries.forEach(entry => {
 
-                        if (
-                            entry.isIntersecting
-                        ) {
+                    if (entry.isIntersecting) {
 
-                            entry.target.classList.add(
-                                "active"
-                            );
+                        entry.target.classList.add("active");
 
-
-                            revealObserver.unobserve(
-                                entry.target
-                            );
-
-                        }
+                        revealObserver.unobserve(
+                            entry.target
+                        );
 
                     }
-                );
+
+                });
 
             },
             {
@@ -371,15 +306,11 @@ function observeRevealElements() {
         );
 
 
-    revealElements.forEach(
-        element => {
+    revealElements.forEach(element => {
 
-            revealObserver.observe(
-                element
-            );
+        revealObserver.observe(element);
 
-        }
-    );
+    });
 
 }
 
@@ -394,15 +325,10 @@ observeRevealElements();
 ========================================================= */
 
 const contactForm =
-    document.getElementById(
-        "contactForm"
-    );
-
+    document.getElementById("contactForm");
 
 const formMessage =
-    document.getElementById(
-        "formMessage"
-    );
+    document.getElementById("formMessage");
 
 
 if (contactForm) {
@@ -415,35 +341,25 @@ if (contactForm) {
 
 
             const formData =
-                new FormData(
-                    contactForm
-                );
+                new FormData(contactForm);
 
 
             const name =
-                formData.get(
-                    "name"
-                );
-
+                formData.get("name");
 
             const email =
-                formData.get(
-                    "email"
-                );
-
+                formData.get("email");
 
             const message =
-                formData.get(
-                    "message"
-                );
+                formData.get("message");
 
 
             /*
-                GANTI EMAIL LO DI SINI
+                GANTI DENGAN EMAIL ASLI
             */
 
             const targetEmail =
-                "hello@example.com";
+                "asyamofficial@gmail.com";
 
 
             const subject =
@@ -465,9 +381,7 @@ ${message}`
 
             if (formMessage) {
 
-                formMessage.classList.remove(
-                    "hidden"
-                );
+                formMessage.classList.remove("hidden");
 
             }
 
@@ -486,9 +400,7 @@ ${message}`
 ========================================================= */
 
 const yearElement =
-    document.getElementById(
-        "year"
-    );
+    document.getElementById("year");
 
 
 if (yearElement) {
@@ -504,35 +416,89 @@ if (yearElement) {
 ========================================================= */
 
 const navbar =
-    document.getElementById(
-        "navbar"
-    );
+    document.getElementById("navbar");
 
 
-window.addEventListener(
-    "scroll",
-    () => {
+window.addEventListener("scroll", () => {
 
-        if (!navbar) {
-            return;
-        }
+    if (!navbar) return;
 
 
-        if (
-            window.scrollY > 30
-        ) {
+    if (window.scrollY > 30) {
 
-            navbar.classList.add(
-                "shadow-2xl"
-            );
+        navbar.classList.add("shadow-2xl");
 
-        } else {
+    } else {
 
-            navbar.classList.remove(
-                "shadow-2xl"
-            );
-
-        }
+        navbar.classList.remove("shadow-2xl");
 
     }
-);
+
+});
+
+
+/* =========================================================
+   LIVE META ADS CHART
+========================================================= */
+
+const chartBars = document.querySelectorAll(".chart-bar");
+
+if (chartBars.length) {
+
+    // Tinggi awal masing-masing bar
+    const chartHeights = [
+        30,
+        45,
+        35,
+        60,
+        70,
+        85,
+        100
+    ];
+
+    // Set tinggi awal
+    chartBars.forEach((bar, index) => {
+        bar.style.height = `${chartHeights[index]}%`;
+    });
+
+
+    function animateChart() {
+
+        chartBars.forEach((bar, index) => {
+
+            // Bar terakhir dibuat sebagai highlight
+            if (index === chartBars.length - 1) {
+                bar.classList.add("active");
+            }
+
+            // Buat variasi gerakan
+            const variation =
+                Math.floor(Math.random() * 25) - 12;
+
+            let newHeight =
+                chartHeights[index] + variation;
+
+            // Batas minimum & maksimum
+            newHeight =
+                Math.max(25, Math.min(100, newHeight));
+
+            bar.style.height =
+                `${newHeight}%`;
+
+        });
+
+    }
+
+
+    // Animasi pertama
+    setTimeout(() => {
+        animateChart();
+    }, 500);
+
+
+    // Bergerak setiap 2 detik
+    setInterval(() => {
+        animateChart();
+    }, 2000);
+
+}

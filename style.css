@@ -251,22 +251,26 @@ body {
 }
 
 
-/* =========================
-   CHART
-========================= */
+/* =========================================================
+   LIVE META ADS CHART
+========================================================= */
 
 .chart-bar {
+    display: block;
     width: 100%;
-
-    border-radius: 4px 4px 0 0;
-
+    transform-origin: bottom;
     transition:
-        height 0.5s ease,
-        opacity 0.3s ease;
+        height 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.5s ease,
+        filter 0.5s ease;
 }
 
-.chart-bar:hover {
-    opacity: 1;
+.chart-bar.active {
+    filter:
+        brightness(1.3)
+        drop-shadow(
+            0 0 8px rgba(0, 245, 160, 0.25)
+        );
 }
 
 
@@ -608,6 +612,94 @@ body {
 
 
 /* =========================
+   SOCIAL ICONS
+========================= */
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: #6b7280;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.social-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* Hover umum */
+
+.social-icon:hover {
+    transform: translateY(-4px);
+    color: white;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-color: rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Instagram */
+
+.social-icon.instagram:hover {
+    color: #f472b6;
+
+    border-color:
+        rgba(244, 114, 182, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(244, 114, 182, 0.12);
+}
+
+
+/* GitHub */
+
+.social-icon.github:hover {
+    color: #ffffff;
+
+    border-color:
+        rgba(255, 255, 255, 0.2);
+
+    box-shadow:
+        0 10px 30px rgba(255, 255, 255, 0.08);
+}
+
+
+/* LinkedIn */
+
+.social-icon.linkedin:hover {
+    color: #60a5fa;
+
+    border-color:
+        rgba(96, 165, 250, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(96, 165, 250, 0.12);
+}
+
+
+/* =========================
    MOBILE MENU
 ========================= */
 
@@ -728,6 +820,265 @@ body {
     .orb-purple {
         width: 200px;
         height: 200px;
+    }
+
+}
+
+/* =========================================================
+   HERO MICRO ANIMATIONS
+========================================================= */
+
+/* =========================
+   PROFILE FRAME
+========================= */
+
+.profile-wrapper {
+    animation: profileWrapperFloat 7s ease-in-out infinite;
+}
+
+@keyframes profileWrapperFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+/* Bingkai belakang bergerak halus */
+
+.profile-wrapper::before {
+    transform: rotate(4deg);
+    animation: frameOne 8s ease-in-out infinite;
+}
+
+@keyframes frameOne {
+    0%, 100% {
+        transform: rotate(4deg) translate(0, 0);
+    }
+
+    50% {
+        transform: rotate(5deg) translate(4px, -4px);
+    }
+}
+
+
+.profile-wrapper::after {
+    transform: rotate(-5deg);
+    animation: frameTwo 10s ease-in-out infinite;
+}
+
+@keyframes frameTwo {
+    0%, 100% {
+        transform: rotate(-5deg) translate(0, 0);
+    }
+
+    50% {
+        transform: rotate(-7deg) translate(-5px, 5px);
+    }
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card {
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.5s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.profile-card:hover {
+    transform: scale(1.015);
+
+    border-color:
+        rgba(0, 245, 160, 0.25);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.profile-image {
+    transition:
+        transform 1s cubic-bezier(0.2, 0.7, 0.2, 1),
+        filter 0.6s ease;
+}
+
+.profile-card:hover .profile-image {
+    transform: scale(1.035);
+}
+
+
+/* =========================
+   DEVELOPER CARD
+========================= */
+
+.code-card {
+    animation:
+        developerFloat 5s ease-in-out infinite,
+        developerTilt 7s ease-in-out infinite;
+
+    transform-origin: center;
+}
+
+@keyframes developerFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+@keyframes developerTilt {
+
+    0%, 100% {
+        rotate: -1deg;
+    }
+
+    50% {
+        rotate: 1deg;
+    }
+
+}
+
+
+/* Cursor terminal */
+
+.code-card code::after {
+    content: "▋";
+
+    margin-left: 3px;
+
+    color: #00f5a0;
+
+    animation:
+        terminalCursor 1s steps(1) infinite;
+}
+
+@keyframes terminalCursor {
+
+    0%, 45% {
+        opacity: 1;
+    }
+
+    46%, 100% {
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   ROAS CARD
+========================= */
+
+.roas-card {
+    animation:
+        roasFloatNew 6s ease-in-out infinite,
+        roasGlowNew 3s ease-in-out infinite;
+}
+
+@keyframes roasFloatNew {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+}
+
+@keyframes roasGlowNew {
+
+    0%, 100% {
+        box-shadow:
+            0 0 0 rgba(0, 245, 160, 0);
+    }
+
+    50% {
+        box-shadow:
+            0 0 25px rgba(0, 245, 160, 0.12);
+    }
+
+}
+
+
+/* ROAS icon */
+
+.roas-icon {
+    animation:
+        roasIconNew 4s ease-in-out infinite;
+}
+
+@keyframes roasIconNew {
+
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.06) rotate(5deg);
+    }
+
+}
+
+
+/* =========================
+   CAMERA BADGE
+========================= */
+
+.camera-badge {
+    animation:
+        cameraFloat 5s ease-in-out infinite;
+}
+
+@keyframes cameraFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .profile-wrapper,
+    .profile-wrapper::before,
+    .profile-wrapper::after,
+    .code-card,
+    .roas-card,
+    .roas-icon,
+    .camera-badge {
+        animation: none !important;
     }
 
 }
