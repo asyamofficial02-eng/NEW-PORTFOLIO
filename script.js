@@ -359,7 +359,7 @@ if (contactForm) {
             */
 
             const targetEmail =
-                "asyamofficial@gmail.com";
+                "asyamofficial02@gmail.com";
 
 
             const subject =
