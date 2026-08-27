@@ -324,73 +324,76 @@ observeRevealElements();
    CONTACT FORM
 ========================================================= */
 
-const contactForm =
-    document.getElementById("contactForm");
-
-const formMessage =
-    document.getElementById("formMessage");
-
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
 
 if (contactForm) {
 
-    contactForm.addEventListener(
-        "submit",
-        event => {
+    contactForm.addEventListener("submit", async (event) => {
 
-            event.preventDefault();
+        event.preventDefault();
 
+        const submitButton =
+            contactForm.querySelector('button[type="submit"]');
 
-            const formData =
-                new FormData(contactForm);
+        const originalText = submitButton.textContent;
 
+        submitButton.disabled = true;
+        submitButton.textContent = "Mengirim...";
 
-            const name =
-                formData.get("name");
+        if (formMessage) {
+            formMessage.classList.remove("hidden");
+            formMessage.textContent = "Mengirim pesan...";
+        }
 
-            const email =
-                formData.get("email");
+        try {
 
-            const message =
-                formData.get("message");
+            const response = await fetch(
+                contactForm.action,
+                {
+                    method: "POST",
+                    body: new FormData(contactForm),
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                }
+            );
 
+            if (response.ok) {
 
-            /*
-                GANTI DENGAN EMAIL ASLI
-            */
+                contactForm.reset();
 
-            const targetEmail =
-                "asyamofficial02@gmail.com";
+                if (formMessage) {
+                    formMessage.textContent =
+                        "Pesan berhasil dikirim! ✓";
+                }
 
+                submitButton.textContent = "Terkirim ✓";
 
-            const subject =
-                encodeURIComponent(
-                    `Portfolio Contact — ${name}`
-                );
+                setTimeout(() => {
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                }, 3000);
 
+            } else {
 
-            const body =
-                encodeURIComponent(
-                    `Nama: ${name}
-
-Email: ${email}
-
-Pesan:
-${message}`
-                );
-
-
-            if (formMessage) {
-
-                formMessage.classList.remove("hidden");
+                throw new Error("Gagal mengirim");
 
             }
 
+        } catch (error) {
 
-            window.location.href =
-                `mailto:${targetEmail}?subject=${subject}&body=${body}`;
+            if (formMessage) {
+                formMessage.textContent =
+                    "Gagal mengirim pesan. Coba lagi.";
+            }
+
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
 
         }
-    );
+
+    });
 
 }
 
