@@ -257,10 +257,15 @@ body {
 
 .chart-bar {
     display: block;
+
     width: 100%;
+
+    min-height: 6px;
+
     transform-origin: bottom;
+
     transition:
-        height 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        height 1.25s cubic-bezier(0.22, 1, 0.36, 1),
         opacity 0.5s ease,
         filter 0.5s ease;
 }
@@ -269,7 +274,8 @@ body {
     filter:
         brightness(1.3)
         drop-shadow(
-            0 0 8px rgba(0, 245, 160, 0.25)
+            0 0 8px
+            rgba(0, 245, 160, 0.25)
         );
 }
 
@@ -330,7 +336,8 @@ body {
     background: #00f5a0;
 
     box-shadow:
-        0 0 20px rgba(0, 245, 160, 0.5);
+        0 0 20px
+        rgba(0, 245, 160, 0.5);
 }
 
 .purple-dot {
@@ -356,7 +363,8 @@ body {
         rgba(0, 245, 160, 0.25);
 
     box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.35);
+        0 20px 50px
+        rgba(0, 0, 0, 0.35);
 }
 
 
@@ -402,7 +410,8 @@ body {
 
     border-radius: 999px;
 
-    background: rgba(255, 255, 255, 0.05);
+    background:
+        rgba(255, 255, 255, 0.05);
 
     color: #9ca3af;
 
@@ -427,7 +436,8 @@ body {
 
     transition:
         transform 0.35s ease,
-        border-color 0.35s ease;
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 .portfolio-card:hover {
@@ -435,6 +445,10 @@ body {
 
     border-color:
         rgba(0, 245, 160, 0.2);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0, 0, 0, 0.25);
 }
 
 
@@ -444,7 +458,8 @@ body {
 
 .portfolio-image {
     transition:
-        transform 0.6s ease,
+        transform 0.7s
+        cubic-bezier(0.22, 1, 0.36, 1),
         filter 0.6s ease;
 }
 
@@ -452,7 +467,8 @@ body {
 .portfolio-image {
     transform: scale(1.07);
 
-    filter: brightness(0.75);
+    filter:
+        brightness(0.75);
 }
 
 
@@ -465,7 +481,8 @@ body {
 
     border-radius: 999px;
 
-    background: rgba(255, 255, 255, 0.05);
+    background:
+        rgba(255, 255, 255, 0.05);
 
     color: #9ca3af;
 
@@ -473,13 +490,18 @@ body {
 
     transition:
         background 0.25s ease,
-        color 0.25s ease;
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
 .filter-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background:
+        rgba(255, 255, 255, 0.1);
 
     color: white;
+
+    transform:
+        translateY(-1px);
 }
 
 .filter-btn.active {
@@ -538,7 +560,8 @@ body {
 
     border-radius: 12px;
 
-    background: rgba(255, 255, 255, 0.05);
+    background:
+        rgba(255, 255, 255, 0.05);
 }
 
 .contact-icon.whatsapp {
@@ -627,9 +650,12 @@ body {
 
     color: #6b7280;
 
-    background: rgba(255, 255, 255, 0.03);
+    background:
+        rgba(255, 255, 255, 0.03);
 
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
 
     transition:
         transform 0.3s ease,
@@ -645,57 +671,51 @@ body {
 }
 
 
-/* Hover umum */
-
-.social-icon:hover {
-    transform: translateY(-4px);
-    color: white;
-
-    background: rgba(255, 255, 255, 0.08);
-
-    border-color: rgba(255, 255, 255, 0.15);
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.25);
-}
-
-
 /* Instagram */
 
 .social-icon.instagram:hover {
+    transform: translateY(-4px);
+
     color: #f472b6;
 
     border-color:
         rgba(244, 114, 182, 0.3);
 
     box-shadow:
-        0 10px 30px rgba(244, 114, 182, 0.12);
+        0 10px 30px
+        rgba(244, 114, 182, 0.12);
 }
 
 
 /* GitHub */
 
 .social-icon.github:hover {
+    transform: translateY(-4px);
+
     color: #ffffff;
 
     border-color:
         rgba(255, 255, 255, 0.2);
 
     box-shadow:
-        0 10px 30px rgba(255, 255, 255, 0.08);
+        0 10px 30px
+        rgba(255, 255, 255, 0.08);
 }
 
 
 /* LinkedIn */
 
 .social-icon.linkedin:hover {
+    transform: translateY(-4px);
+
     color: #60a5fa;
 
     border-color:
         rgba(96, 165, 250, 0.3);
 
     box-shadow:
-        0 10px 30px rgba(96, 165, 250, 0.12);
+        0 10px 30px
+        rgba(96, 165, 250, 0.12);
 }
 
 
@@ -775,109 +795,85 @@ body {
 }
 
 
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-.reveal {
-    opacity: 0;
-
-    transform:
-        translateY(35px);
-
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-
-    transform:
-        translateY(0);
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 767px) {
-
-    .profile-wrapper::before {
-        inset: -8px;
-    }
-
-    .profile-wrapper::after {
-        inset: -16px;
-    }
-
-    .orb-green {
-        width: 180px;
-        height: 180px;
-    }
-
-    .orb-purple {
-        width: 200px;
-        height: 200px;
-    }
-
-}
-
 /* =========================================================
    HERO MICRO ANIMATIONS
 ========================================================= */
 
-/* =========================
-   PROFILE FRAME
-========================= */
-
 .profile-wrapper {
-    animation: profileWrapperFloat 7s ease-in-out infinite;
+    position: relative;
+
+    animation:
+        profileWrapperFloat
+        7s
+        ease-in-out
+        infinite;
 }
 
 @keyframes profileWrapperFloat {
-    0%, 100% {
-        transform: translateY(0);
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
     }
 
     50% {
-        transform: translateY(-7px);
+        transform:
+            translateY(-7px);
     }
+
 }
 
 
-/* Bingkai belakang bergerak halus */
-
 .profile-wrapper::before {
-    transform: rotate(4deg);
-    animation: frameOne 8s ease-in-out infinite;
+    animation:
+        frameOne
+        8s
+        ease-in-out
+        infinite;
 }
 
 @keyframes frameOne {
-    0%, 100% {
-        transform: rotate(4deg) translate(0, 0);
+
+    0%,
+    100% {
+        transform:
+            rotate(4deg)
+            translate(0, 0);
     }
 
     50% {
-        transform: rotate(5deg) translate(4px, -4px);
+        transform:
+            rotate(5deg)
+            translate(4px, -4px);
     }
+
 }
 
 
 .profile-wrapper::after {
-    transform: rotate(-5deg);
-    animation: frameTwo 10s ease-in-out infinite;
+    animation:
+        frameTwo
+        10s
+        ease-in-out
+        infinite;
 }
 
 @keyframes frameTwo {
-    0%, 100% {
-        transform: rotate(-5deg) translate(0, 0);
+
+    0%,
+    100% {
+        transform:
+            rotate(-5deg)
+            translate(0, 0);
     }
 
     50% {
-        transform: rotate(-7deg) translate(-5px, 5px);
+        transform:
+            rotate(-7deg)
+            translate(-5px, 5px);
     }
+
 }
 
 
@@ -888,23 +884,22 @@ body {
 .profile-card {
     position: relative;
 
-    overflow: hidden;
-
     transition:
         transform 0.5s ease,
         border-color 0.4s ease,
         box-shadow 0.4s ease;
 }
 
-
 .profile-card:hover {
-    transform: scale(1.015);
+    transform:
+        scale(1.015);
 
     border-color:
         rgba(0, 245, 160, 0.25);
 
     box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.35);
+        0 25px 70px
+        rgba(0, 0, 0, 0.35);
 }
 
 
@@ -914,12 +909,15 @@ body {
 
 .profile-image {
     transition:
-        transform 1s cubic-bezier(0.2, 0.7, 0.2, 1),
+        transform 1s
+        cubic-bezier(0.2, 0.7, 0.2, 1),
         filter 0.6s ease;
 }
 
-.profile-card:hover .profile-image {
-    transform: scale(1.035);
+.profile-card:hover
+.profile-image {
+    transform:
+        scale(1.035);
 }
 
 
@@ -929,58 +927,45 @@ body {
 
 .code-card {
     animation:
-        developerFloat 5s ease-in-out infinite,
-        developerTilt 7s ease-in-out infinite;
+        developerFloat
+        5s
+        ease-in-out
+        infinite,
+        developerTilt
+        7s
+        ease-in-out
+        infinite;
 
-    transform-origin: center;
+    transform-origin:
+        center;
 }
 
 @keyframes developerFloat {
 
-    0%, 100% {
-        transform: translateY(0);
+    0%,
+    100% {
+        transform:
+            translateY(0);
     }
 
     50% {
-        transform: translateY(-7px);
+        transform:
+            translateY(-7px);
     }
 
 }
 
 @keyframes developerTilt {
 
-    0%, 100% {
-        rotate: -1deg;
+    0%,
+    100% {
+        rotate:
+            -1deg;
     }
 
     50% {
-        rotate: 1deg;
-    }
-
-}
-
-
-/* Cursor terminal */
-
-.code-card code::after {
-    content: "▋";
-
-    margin-left: 3px;
-
-    color: #00f5a0;
-
-    animation:
-        terminalCursor 1s steps(1) infinite;
-}
-
-@keyframes terminalCursor {
-
-    0%, 45% {
-        opacity: 1;
-    }
-
-    46%, 100% {
-        opacity: 0;
+        rotate:
+            1deg;
     }
 
 }
@@ -992,76 +977,362 @@ body {
 
 .roas-card {
     animation:
-        roasFloatNew 6s ease-in-out infinite,
-        roasGlowNew 3s ease-in-out infinite;
+        roasFloatNew
+        6s
+        ease-in-out
+        infinite,
+        roasGlowNew
+        3s
+        ease-in-out
+        infinite;
 }
 
 @keyframes roasFloatNew {
 
-    0%, 100% {
-        transform: translateY(0);
+    0%,
+    100% {
+        transform:
+            translateY(0);
     }
 
     50% {
-        transform: translateY(8px);
+        transform:
+            translateY(8px);
     }
 
 }
 
 @keyframes roasGlowNew {
 
-    0%, 100% {
+    0%,
+    100% {
         box-shadow:
-            0 0 0 rgba(0, 245, 160, 0);
+            0 0 0
+            rgba(0, 245, 160, 0);
     }
 
     50% {
         box-shadow:
-            0 0 25px rgba(0, 245, 160, 0.12);
-    }
-
-}
-
-
-/* ROAS icon */
-
-.roas-icon {
-    animation:
-        roasIconNew 4s ease-in-out infinite;
-}
-
-@keyframes roasIconNew {
-
-    0%, 100% {
-        transform: scale(1) rotate(0deg);
-    }
-
-    50% {
-        transform: scale(1.06) rotate(5deg);
+            0 0 25px
+            rgba(0, 245, 160, 0.12);
     }
 
 }
 
 
 /* =========================
-   CAMERA BADGE
+   ROAS ICON
 ========================= */
 
-.camera-badge {
+.roas-icon {
     animation:
-        cameraFloat 5s ease-in-out infinite;
+        roasIconNew
+        4s
+        ease-in-out
+        infinite;
 }
 
-@keyframes cameraFloat {
+@keyframes roasIconNew {
 
-    0%, 100% {
-        transform: translateY(0);
+    0%,
+    100% {
+        transform:
+            scale(1)
+            rotate(0deg);
     }
 
     50% {
-        transform: translateY(-5px);
+        transform:
+            scale(1.06)
+            rotate(5deg);
     }
 
+}
+
+
+/* =========================================================
+   SCROLL REVEAL - SAFE VERSION
+========================================================= */
+
+/*
+    PENTING:
+
+    .reveal TIDAK disembunyikan secara default.
+
+    Jadi kalau JavaScript gagal,
+    semua section tetap terlihat.
+*/
+
+.reveal {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+/*
+    JavaScript akan menambahkan
+    .reveal-pending untuk elemen
+    yang memang belum masuk viewport.
+*/
+
+.reveal.reveal-pending {
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+}
+
+
+.reveal.reveal-pending.active {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   PORTFOLIO LIGHTBOX
+========================================================= */
+
+.portfolio-lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background:
+        rgba(4, 5, 8, 0.88);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+
+.portfolio-lightbox.open {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* =========================
+   LIGHTBOX PANEL
+========================= */
+
+.lightbox-panel {
+    position: relative;
+
+    width:
+        min(1100px, 94vw);
+
+    max-height:
+        92vh;
+
+    padding: 14px;
+
+    border-radius: 24px;
+
+    background:
+        rgba(16, 18, 24, 0.94);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        0 30px 100px
+        rgba(0, 0, 0, 0.55);
+
+    transform:
+        scale(0.94)
+        translateY(15px);
+
+    transition:
+        transform 0.4s
+        cubic-bezier(0.22, 1, 0.36, 1);
+
+    overflow:
+        auto;
+}
+
+
+.portfolio-lightbox.open
+.lightbox-panel {
+    transform:
+        scale(1)
+        translateY(0);
+}
+
+
+/* =========================
+   LIGHTBOX IMAGE
+========================= */
+
+.lightbox-image {
+    display: block;
+
+    width: 100%;
+
+    max-height:
+        72vh;
+
+    object-fit:
+        contain;
+
+    border-radius:
+        16px;
+
+    background:
+        #08090d;
+}
+
+
+/* =========================
+   LIGHTBOX CAPTION
+========================= */
+
+.lightbox-caption {
+    padding:
+        16px
+        6px
+        4px;
+}
+
+
+.lightbox-caption h3 {
+    color:
+        #ffffff;
+}
+
+
+.lightbox-caption p {
+    color:
+        #9ca3af;
+}
+
+
+.lightbox-hint {
+    color:
+        #4b5563;
+
+    font-size:
+        0.7rem;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+}
+
+
+/* =========================
+   LIGHTBOX CLOSE
+========================= */
+
+.lightbox-close {
+    position: fixed;
+
+    top: 20px;
+
+    right: 24px;
+
+    z-index: 10000;
+
+    width: 44px;
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 999px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    background:
+        rgba(16, 18, 24, 0.8);
+
+    color:
+        #ffffff;
+
+    font-size:
+        28px;
+
+    line-height:
+        1;
+
+    cursor:
+        pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.lightbox-close:hover {
+    background:
+        #00f5a0;
+
+    color:
+        #08090d;
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =========================
+   PORTFOLIO ACCESSIBILITY
+========================= */
+
+.portfolio-card {
+    cursor:
+        pointer;
+}
+
+.portfolio-card:focus-visible {
+    outline:
+        2px solid
+        #00f5a0;
+
+    outline-offset:
+        4px;
 }
 
 
@@ -1071,14 +1342,112 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
 
+    html {
+        scroll-behavior:
+            auto;
+    }
+
+
     .profile-wrapper,
     .profile-wrapper::before,
     .profile-wrapper::after,
     .code-card,
     .roas-card,
-    .roas-icon,
-    .camera-badge {
-        animation: none !important;
+    .roas-icon {
+        animation:
+            none !important;
+    }
+
+
+    .reveal,
+    .reveal.reveal-pending,
+    .reveal.reveal-pending.active {
+        opacity:
+            1;
+
+        transform:
+            none;
+
+        transition:
+            none;
+    }
+
+
+    .portfolio-lightbox,
+    .lightbox-panel {
+        transition:
+            none;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 767px) {
+
+    .profile-wrapper::before {
+        inset:
+            -8px;
+    }
+
+    .profile-wrapper::after {
+        inset:
+            -16px;
+    }
+
+    .orb-green {
+        width:
+            180px;
+
+        height:
+            180px;
+    }
+
+    .orb-purple {
+        width:
+            200px;
+
+        height:
+            200px;
+    }
+
+
+    .lightbox-close {
+        top:
+            12px;
+
+        right:
+            12px;
+    }
+
+
+    .portfolio-lightbox {
+        padding:
+            14px;
+    }
+
+
+    .lightbox-panel {
+        width:
+            96vw;
+
+        padding:
+            10px;
+
+        border-radius:
+            18px;
+    }
+
+
+    .lightbox-image {
+        max-height:
+            68vh;
+
+        border-radius:
+            12px;
     }
 
 }
